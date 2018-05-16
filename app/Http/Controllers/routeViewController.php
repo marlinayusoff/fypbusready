@@ -36,7 +36,7 @@ class routeViewController extends Controller
 
     	$detail = '<form action="" method="post" id="details">
 						<div class="panel panel-default" style="padding: 10px 10px 40px;">
-						<table class="table">
+						<table>
 							<tbody>
 								<tr>
 									<td><font size="5">Bus Route</font></td>
@@ -50,13 +50,14 @@ class routeViewController extends Controller
 							  	<tr>
 							  		<th>#</th>
 									<th style="background-color: yellow ;color: #000;">Route</th>
+									<th>Action</th>
 								</tr>
 							';
 
 						$laluan_details_2 = DB::table('laluan_bas')
 						->join('pemandu_bas','laluan_bas.pemandu_id','=','pemandu_bas.pemandu_id')
     					->join('checkpoint','laluan_bas.checkpoint_id','=','checkpoint.checkpoint_id')
-						->select('checkpoint.*','pemandu_bas.*')
+						->select('checkpoint.*','pemandu_bas.*','laluan_bas.laluan_id')
 						->where('pemandu_bas.pemandu_nama', $driver)
 						            ->get();
 
@@ -70,6 +71,14 @@ $i = 1;
 							<tr>
 								<td>'.$i++.'</td>
 								<td style="background-color: #fff;">'.$d->checkpoint_nama.'</td>
+								<td>
+								<form method="post" action="/delete" style="float: left;margin-right: 5px;">
+									<input type="hidden" name="laluan_id" value='.$d->laluan_id.'>
+									<input type="hidden" name="_token" value="{{ csrf_token() }}">
+									<meta name="csrf-token" content="{{ csrf_token() }}">
+                                        <button style="margin-bottom: 2px; display: block; width: 100px;" type="submit" class="btn btn-danger btn-xs"> Delete <i class="fa fa-trash-o "></i></button>
+                                    </form>
+                                </td>
 							</tr>
 						';
 				}
@@ -99,7 +108,8 @@ $a = 2;
 					    <div id="legend"></div>
 					    <script type="text/javascript">
 					        $(".subway-map").subwayMap({ debug: true });
-					    </script></body>';
+						</script>
+						';
 
 			return $detail;
 

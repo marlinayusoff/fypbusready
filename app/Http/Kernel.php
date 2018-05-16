@@ -58,5 +58,6 @@ class Kernel extends HttpKernel
         'guest' => \App\Http\Middleware\RedirectIfAuthenticated::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'mobile' => \App\Http\Middleware\AuthMobile::class,
+        'pemandu_bas' => \App\Http\Middleware\RedirectIfNotPemanduBas::class,
     ];
 }

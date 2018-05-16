@@ -5,11 +5,11 @@ namespace App;
 use \App\Penjaga;
 use Illuminate\Database\Eloquent\Model;
 
-class Pelajar extends Model
+class TidakHadir extends Model
 {
-   protected $table = 'pelajar';
-    protected $fillable = ['pelajar_id','pelajar_nama','sekolah_id','pelajar_umur','pelajar_sesi'];
-    protected $primaryKey = 'pelajar_id';
+   protected $table = 'tidakhadir';
+    protected $fillable = ['tidakhadir_id','pelajar_id'];
+    protected $primaryKey = 'tidakhadir_id';
 
     protected $hidden = [
         'created_at',

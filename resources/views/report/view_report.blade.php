@@ -59,7 +59,7 @@
                 <ul class="list">
                     <li class="header">MAIN NAVIGATION</li>
                     <li>
-                        <a href="/">
+                        <a href="/home">
                             <i class="material-icons">home</i>
                             <span>Home</span>
                         </a>
@@ -129,33 +129,6 @@
                         <a href="javascript:;">
                             <i class="material-icons">insert_drive_file</i>
                             <span>Generate Report</span>
-                        </a>
-                    </li>
-
-                    </li>
-                    <li>
-                        <a href="pages/changelogs.html">
-                            <i class="material-icons">update</i>
-                            <span>Changelogs</span>
-                        </a>
-                    </li>
-                    <li class="header">LABELS</li>
-                    <li>
-                        <a href="javascript:void(0);">
-                            <i class="material-icons col-red">donut_large</i>
-                            <span>Important</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="javascript:void(0);">
-                            <i class="material-icons col-amber">donut_large</i>
-                            <span>Warning</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="javascript:void(0);">
-                            <i class="material-icons col-light-blue">donut_large</i>
-                            <span>Information</span>
                         </a>
                     </li>
                 </ul>

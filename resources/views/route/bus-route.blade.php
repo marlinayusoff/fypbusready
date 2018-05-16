@@ -41,7 +41,6 @@
     }
     .subway-map span
     {
-        margin: 5px 5px 5px 0 !important;
         width: 200px !important;
     }
 
@@ -71,124 +70,6 @@
                 <a href="javascript:void(0);" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false"></a>
                 <a href="javascript:void(0);" class="bars"></a>
                 <a class="navbar-brand" href="/">BUS READY SYSTEM - ADMIN</a>
-            </div>
-            <div class="collapse navbar-collapse" id="navbar-collapse">
-                <ul class="nav navbar-nav navbar-right">
-                    <!-- Call Search -->
-                    <li><a href="javascript:void(0);" class="js-search" data-close="true"><i class="material-icons">search</i></a></li>
-                    <!-- #END# Call Search -->
-                    <!-- Notifications -->
-                    <li class="dropdown">
-                        <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button">
-                            <i class="material-icons">notifications</i>
-                            <span class="label-count">7</span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li class="header">NOTIFICATIONS</li>
-                            <li class="body">
-                                <ul class="menu">
-                                    <li>
-                                        <a href="javascript:void(0);">
-                                            <div class="icon-circle bg-light-green">
-                                                <i class="material-icons">person_add</i>
-                                            </div>
-                                            <div class="menu-info">
-                                                <h4>12 new members joined</h4>
-                                                <p>
-                                                    <i class="material-icons">access_time</i> 14 mins ago
-                                                </p>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0);">
-                                            <div class="icon-circle bg-cyan">
-                                                <i class="material-icons">add_shopping_cart</i>
-                                            </div>
-                                            <div class="menu-info">
-                                                <h4>4 sales made</h4>
-                                                <p>
-                                                    <i class="material-icons">access_time</i> 22 mins ago
-                                                </p>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0);">
-                                            <div class="icon-circle bg-red">
-                                                <i class="material-icons">delete_forever</i>
-                                            </div>
-                                            <div class="menu-info">
-                                                <h4><b>Nancy Doe</b> deleted account</h4>
-                                                <p>
-                                                    <i class="material-icons">access_time</i> 3 hours ago
-                                                </p>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0);">
-                                            <div class="icon-circle bg-orange">
-                                                <i class="material-icons">mode_edit</i>
-                                            </div>
-                                            <div class="menu-info">
-                                                <h4><b>Nancy</b> changed name</h4>
-                                                <p>
-                                                    <i class="material-icons">access_time</i> 2 hours ago
-                                                </p>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0);">
-                                            <div class="icon-circle bg-blue-grey">
-                                                <i class="material-icons">comment</i>
-                                            </div>
-                                            <div class="menu-info">
-                                                <h4><b>John</b> commented your post</h4>
-                                                <p>
-                                                    <i class="material-icons">access_time</i> 4 hours ago
-                                                </p>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0);">
-                                            <div class="icon-circle bg-light-green">
-                                                <i class="material-icons">cached</i>
-                                            </div>
-                                            <div class="menu-info">
-                                                <h4><b>John</b> updated status</h4>
-                                                <p>
-                                                    <i class="material-icons">access_time</i> 3 hours ago
-                                                </p>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0);">
-                                            <div class="icon-circle bg-purple">
-                                                <i class="material-icons">settings</i>
-                                            </div>
-                                            <div class="menu-info">
-                                                <h4>Settings updated</h4>
-                                                <p>
-                                                    <i class="material-icons">access_time</i> Yesterday
-                                                </p>
-                                            </div>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="footer">
-                                <a href="javascript:void(0);">View All Notifications</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <!-- #END# Notifications -->
-                  <!-- #END# Tasks -->
-                  
-                </ul>
             </div>
         </div>
     </nav>
@@ -290,43 +171,16 @@
                             <span>Generate Report</span>
                         </a>
                     </li>
-
-                    </li>
-                    <li>
-                        <a href="pages/changelogs.html">
-                            <i class="material-icons">update</i>
-                            <span>Changelogs</span>
-                        </a>
-                    </li>
-                    <li class="header">LABELS</li>
-                    <li>
-                        <a href="javascript:void(0);">
-                            <i class="material-icons col-red">donut_large</i>
-                            <span>Important</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="javascript:void(0);">
-                            <i class="material-icons col-amber">donut_large</i>
-                            <span>Warning</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="javascript:void(0);">
-                            <i class="material-icons col-light-blue">donut_large</i>
-                            <span>Information</span>
-                        </a>
-                    </li>
                 </ul>
             </div>
             <!-- #Menu -->
             <!-- Footer -->
             <div class="legal">
                 <div class="copyright">
-                    &copy; 2016 - 2017 <a href="javascript:void(0);">AdminBSB - Material Design</a>.
+                    &copy; 2018 <a href="javascript:void(0);"><strong>Bus<strong> Ready System</a>.
                 </div>
                 <div class="version">
-                    <b>Version: </b> 1.0.5
+                    <b>Version: </b> 1.0
                 </div>
             </div>
             <!-- #Footer -->
@@ -338,16 +192,19 @@
 
      <!--main content start-->
 	<section class="content">
-        <div class="container-fluid">
         	<!--form-->
-            <div class="row clearfix">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+           <!-- <div class="row clearfix">-->
+                
+                <!--<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">-->
+                    
                     <div class="card">
                         <div class="header">
                             <h2>BUS ROUTE</h2>
                            
                         </div>
                         <div class="body">
+
+                            
                             <fieldset>
                             <div class="col-md-12">
                                 <div class="panel-body">
@@ -366,34 +223,24 @@
                                           <td>
                                             <input id="laluan" type="text-center" style="text-align: center;" value="{{$d->pemandu_nama}}" disabled/>
                                           </td>
-                                           <td align="right"><button id="view" onclick="changeData({{$d->laluan_id}});" style="margin-bottom: 2px; display: block; width: 100px;" class="btn btn-success btn-xs" data-toggle="modal" data-target="#myModal"> View </button></td>
+                                           <td align="right">
+                                                <form method="get" action="{{url('/route/'.$d->pemandu_id.'/edit')}}">
+                                                    <button style="margin-bottom: 2px; display: block; width: 100px;" class="btn btn-warning btn-xs" type="submit" class="btn btn-primary btn-xs">Edit</button>
+                                                </form>
+                                                    <button id="view" onclick="changeData({{$d->laluan_id}});" style="margin-bottom: 2px; display: block; width: 100px;" class="btn btn-success btn-xs" data-toggle="collapse" data-target="#myModal"> View </button>
+                                            </td>
                                         </tr>
                                         @endforeach
                                       </tbody>
                                     </table>
                                 </div>
                             </fieldset>
-
-                        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                          <div class="modal-dialog">
-                            <div class="modal-content">
-                              <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                <h4 class="modal-title" id="myModalLabel">Laluan Yang Ada</h4>
-                              </div>
-                              <div class="modal-body" id="displayRoute">
-                              </div>
-                              <div class="modal-footer">
-                              </div>
-                            </div>
-                          </div>
-                        </div> 
-
-                            	
                         </div>
                     </div>
-                </div>
-            </div>
+               <!-- </div>
+            </div>-->
+             <div id="displayRoute"></div>
+                   
             <!-- tutup form -->
             </div>
     </section>
@@ -461,6 +308,16 @@
 
   <script type="text/javascript">
         $(".subway-map").subwayMap({ debug: true });
+    </script>
+
+    <script>
+    $(document).ready(function() {
+        $.ajaxSetup({
+         headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        });
+    });
     </script>
 
     @endsection

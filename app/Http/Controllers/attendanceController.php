@@ -22,4 +22,8 @@ class attendanceController extends Controller
     	return view('attendance.attendance_list', compact('attendance'));
     }
     
+    public function viewAtt(){
+		//type here
+    	return view('attendance.attendance_list', compact('attendance'));
+    }
 }

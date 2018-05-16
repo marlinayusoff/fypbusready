@@ -1,15 +1,6 @@
 @extends('main')
 
 @section('content')
- <style>
-        #googleMap {
-            height: 400px;
-            width: 100%;
-            margin-top: 10px;
-            margin-bottom: 10px;
-        }
-</style>
-
 
 <body class="theme-orange">
     
@@ -76,12 +67,12 @@
                             <span>Bus Route</span>
                         </a>
                         <ul class="ml-menu">
-                            <li class="active">
-                                <a href="javascript:;">
+                            <li>
+                                <a href="/route/list-bus-route">
                                     <span>Route Marker</span>
                                 </a>
                             </li>
-                            <li>
+                            <li class="active">
                                 <a href="/route/bus-route">
                                     <span>Bus Route</span>
                                 </a>
@@ -120,12 +111,12 @@
                         </a>
                         <ul class="ml-menu">
                             <li>
-                                <a href="/school/school_list" >
+                                <a href="/school/school_list">
                                     <span>List of School</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="/school/add_school" >
+                                <a href="/school/add_school">
                                     <span>Add School</span>
                                 </a>
                             </li>
@@ -164,47 +155,35 @@
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="card">
                         <div class="header">
-                            <h2>ROUTE MARKER</h2>
-
+                            <h2>EDIT BUS ROUTE</h2>
+                           
                         </div>
                         <div class="body">
-                            <h5>Please fill in below to add new checkpoint</h5>
-                             {!! Form::open(array('url'=>'/route/route-marker','files'=>true)) !!}
+                            <form id="form_advanced_validation" action="/route/bus-route/add" method="get"  id="contact_form">
                                 {{ csrf_field()}}
-                                    
-                                            <div class="form-group">
-                                                <label class="form-label">Name</label>
-                                                <input type="text" class="form-control" name="checkpoint_nama" placeholder="Checkpoint name" required>
-                                            </div>
-                                        
-                                        
-                                            <div class="form-group">
-                                                <label class="form-label">Map</label>
-                                                <input type="text" class="form-control" id="searchmap" required>
-                                                <div id="googleMap"></div><br>
-                                            </div>
-                                        
-                                        
-                                            <div class="form-group">
-                                                <label for="">Lat</label>
-                                                <input type="text" class="form-control" name="checkpoint_lat" id="lat" placeholder="tengok lat kat sini" readonly>
-                                            </div>
-                                        
-                                        <div class="form">
-                                            <div class="form-group">
-                                                <label for="">Lng</label>
-                                                <input type="text" class="form-control" name="checkpoint_lng" id="lng" placeholder="tengok lng kat sini" readonly>
-                                            </div>
-                                        </div>
-                                        <button class="btn btn-primary waves-effect" type="submit">Save</button>
-                                        {!! Form::close() !!}
-                                    </div>
-                            </div>
-                            
+                                <table id="table3" class="table table-hover table-bordered text-center">
+								 <thead class="thead-inverse">
+									<tr>
+										<th> # </th>
+										<th>Pick up/Drop off point</th>
+									</tr>
+								  </thead>
+                                  <?php $i = 1; ?>
+                                  <tfoot>
+									<tr>
+										<td colspan="3" style="text-align:center">
+											<a id="add3" type="submit" class="btn btn-primary">Add <i class="fa fa-plus"></i></a>
+                                            <input type="hidden" name="pemandu_id" value="{{ $item->pemandu_id }}">
+                                            <button id="save3" style="display:none;" type="submit" class="btn btn-success">Save <i class="fa fa-floppy-o"></i></button>
+											<a id="reset3" style="display:none;" class="btn btn-warning">Reset <i class="fa fa-times"></i></a>
+											<a id="cancel3" class="btn btn-danger" href="/route/bus-route">Cancel <i class="fa fa-times"></i></a>
+										</td>
+									</tr>
+								</tfoot>
+							</table>
+                        </form>
                         </div>
                     </div>
-                    <!--tutup card-->
-
                 </div>
             </div>
             <!-- tutup form -->
@@ -212,100 +191,57 @@
     </section>
     <!--tutup body page-->
         </div>
-  <script src="{{ URL::asset('theme/plugins/jquery/jquery.min.js') }}"></script>
+    <script src="{{ URL::asset('theme/plugins/jquery/jquery.min.js') }}"></script>
     <script src="{{ URL::asset('theme/js/bootstrap.js') }}"></script>
-
      <!-- Select Plugin Js -->
     <script src="{{ URL::asset('theme/plugins/bootstrap-select/js/bootstrap-select.js') }}"></script>
     <!-- Slimscroll Plugin Js -->
     <script src="{{ URL::asset('theme/plugins/jquery-slimscroll/jquery.slimscroll.js') }}"></script>
-
     <!--waves-->
     <script src="{{ URL::asset('theme/plugins/node-waves/waves.js') }}"></script>
-
      <!-- Jquery Validation Plugin Css -->
     <script src="{{ URL::asset('theme/plugins/jquery-validation/jquery.validate.js') }}"></script>
-
     <!-- JQuery Steps Plugin Js -->
     <script src="{{ URL::asset('theme/plugins/jquery-steps/jquery.steps.js') }}"></script>
-
     <!-- Sweet Alert Plugin Js -->
     <script src="{{ URL::asset('theme/plugins/sweetalert/sweetalert.min.js') }}"></script>
-
     <!-- Autosize Plugin Js -->
     <script src="{{ URL::asset('theme/plugins/autosize/autosize.js') }}"></script>
-
     <!-- Moment Plugin Js -->
     <script src="{{ URL::asset('theme/plugins/momentjs/moment.js') }}"></script>
-
     <!-- Bootstrap Material Datetime Picker Plugin Js -->
     <script src="{{ URL::asset('theme/plugins/bootstrap-material-datetimepicker/js/bootstrap-material-datetimepicker.js') }}"></script>
-
-
-
     <script src="{{ URL::asset('theme/js/admin.js') }}"></script>
     <script src="{{ URL::asset('theme/js/pages/forms/basic-form-elements.js') }}"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gmaps.js/0.4.24/gmaps.js"></script>
-
     <script src="{{ URL::asset('theme/js/demo.js') }}"></script>
+    <script type="text/javascript">
 
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB-yX8G29yOVvQ-BVMua1ZrBxXPi5Z7M1k&libraries=places"></script>
+  var tr1 = $('#table2 tbody tr').length;
+  	$('#add3').on('click',function() {
+  		var newRow = "<td class='input-group'><span class='input-group-addon'></span><select name='checkpoint_id[]' class='form-control show-tick' id='checkpoint_id' required><option value=''>Select Pickup / Drop off</option><option value='1' >SK Kantan Permai</option><option value='3'>Depan Kolej Komuniti Kajang</option></td>";
+    	$('#dropdownCheckpoint').val($('#checkpoint_id').val());
+        var tableRow1 = $('#table3 tbody tr').length;
+  		tableRow1++;
+  		$('#table3').append("<tr><th scope='row'>"+tableRow1+"</th>"+newRow);
+        $('#save3').css('display','inline-block');
+        $('#reset3').css('display','inline-block');
+  		$('#cancel3').css('display','inline-block');
+  	});
+  	var trD1 = tr1 + 1;
+  	$('#reset3').on('click', function() {
+    	var rowCount = $('#table2 tbody tr').length;
+    	    for(rowCount; rowCount > trD1; rowCount--) {
+    		$('#table3 tbody tr:last').remove();
+    	}
+  	});
 
-     <script type="text/javascript">
-        var geocoder;
-        var map;
-        var marker;
-        var searchBox;
-
-        /*
-        * Google Map with marker
-        */
-            map = new google.maps.Map(document.getElementById("googleMap"), {
-                center:{
-                    lat: 2.929997,
-                    lng: 101.7774225
-                },
-                zoom:15
-            });
-
-            geocoder = new google.maps.Geocoder();
-
-            marker = new google.maps.Marker({
-                position: {
-                    lat: 2.929997,
-                    lng: 101.7774225
-                },
-                map: map,
-                draggable: true
-            });
-
-            searchBox = new google.maps.places.SearchBox(document.getElementById('searchmap'));
-
-            google.maps.event.addListener(searchBox,'places_changed',function(){
-
-                var places = searchBox.getPlaces();
-                var bounds = new google.maps.LatLngBounds();
-                var i,place;
-
-                for(i=0; place=places[i]; i++){
-                    bounds.extend(place.geometry.location);
-                    marker.setPosition(place.geometry.location);
-                }
-
-                map.fitBounds(bounds);
-                map.setZoom(15);
-            });
-
-            google.maps.event.addListener(marker,'position_changed',function(){
-
-                var lat = marker.getPosition().lat();
-                var lng = marker.getPosition().lng();
-
-                $('#lat').val(lat);
-                $('#lng').val(lng);
-            });
-
-    </script>
-
-
-    @endsection
+  	$('#cancel3').on('click', function() {
+    	var rowCount = $('#table2 tbody tr').length;
+    	for(rowCount; rowCount > tr1; rowCount--) {
+    		$('#table3 tbody tr:last').remove();
+    	}
+  		$('#save3').css('display','none');
+  		$('#reset3').css('display','none');
+  	});
+</script>
+@endsection

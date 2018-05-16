@@ -49,6 +49,11 @@ Route::post('/route/route-marker', function(){
 	return View::make('route/list-bus-route',compact('locations'));	
 });
 Route::delete('route/list-bus-route/{checkpoint_id}','routeController@destroy');
+//laluan bas
+Route::get('route/{pemandu_id}/edit','routeController@edit');
+Route::get('/route/bus-route/add', 'routeController@addRoute');
+Route::get('/delete/{laluan_id}', 'routeController@Deleteshow');
+Route::post('/delete', 'routeController@processDelete');
 //about bus route 
 Route::get('/route/bus-route','routeController@list');
 Route::get('/getRouteDetails', 'routeViewController@process');
